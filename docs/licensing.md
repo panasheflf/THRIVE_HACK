@@ -5,9 +5,10 @@ data so contributors can reuse each part appropriately.
 
 ## Code
 
-Software source code is licensed under the MIT License. See `LICENSE`.
+Software source code is licensed under Apache License 2.0. See `LICENSE`.
 
-This gives contributors a standard permissive open-source license.
+This gives contributors a standard permissive open-source license with an
+explicit patent grant.
 
 ## Documentation and Governance
 

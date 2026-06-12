@@ -1,4 +1,4 @@
-﻿# Menstrual Health Open Data Governance
+# Menstrual Health Open Data Governance
 
 ## Principles
 
@@ -92,7 +92,7 @@ Open documentation, schema, code, research methods, and contributor resources.
 
 ### Synthetic (Tier 2)
 
-Fake or fixture datasets for development, such as `synthetic-data/datasets/sample_50.csv`.
+Fake or fixture datasets for development, such as `synthetic-data/sample_20.csv`.
 No real participant data.
 
 ### Aggregate (Tier 3)

@@ -1,12 +1,12 @@
-# Menstrual Health Open — THRIVE Hackathon Starter Repository
+﻿# Menstrual Health Open
 
 Open-source infrastructure for ethical menstrual health research.
 
-This repository is the shared foundation for the THRIVE hackathon and for
-ongoing open-source contribution after the event. It provides a data schema
-and dictionary, synthetic datasets, validation tools, a starter dashboard,
-research notebooks, governance documentation, contribution guidelines, and a
-challenge/issue backlog that participants can pull, run, improve, and adapt.
+This repository is built for a global menstrual health research infrastructure
+hackathon and for ongoing open-source contribution after the event. It provides
+schemas, synthetic datasets, a basic validation baseline, documentation,
+governance resources, and open-ended project inspirations that contributors can
+pull, run, improve, and adapt.
 
 This is not an open raw-data project. Real participant-level menstrual health
 data is sensitive and is not included in this repository. Contributors use
@@ -26,63 +26,76 @@ How might we build the tools, standards, and systems needed to make menstrual
 health data more accessible, reliable, ethical, and useful for research
 worldwide?
 
+## What Contributors Can Explore
+
+The repository does not prescribe what participants must build. It provides a
+shared foundation and a set of inspirations. Contributors can follow those
+directions, remix them, or define something different.
+
+Possible areas include data quality, synthetic data, interoperability,
+accessibility, localization, privacy-preserving analytics, partner workflows,
+public communication, education, governance, research methods, and community
+engagement.
+
 ## Repository Map
 
 | Path | Purpose |
 | --- | --- |
-| `schema/` | Data schema, data dictionary, and field definitions |
-| `synthetic-data/` | Synthetic dataset generator and bundled fake datasets |
-| `governance/` | Ethics checklist, consent templates, access policy, contribution policy |
-| `validation/` | Dataset validation script and quality rules |
-| `dashboard/` | Starter Streamlit dashboard template |
-| `notebooks/` | Research notebooks for exploration, quality, and analysis patterns |
-| `docs/` | Project brief, data model, governance overview, contributor workflow |
-| `issues/` | Challenge statements and the starter issue backlog |
-| `.github/` | CI, pull request template, and issue templates |
+| `schema/` | Data dictionary, survey schema, and field definitions. |
+| `synthetic-data/` | Synthetic dataset generator and sample fake data. |
+| `validation/` | Dataset validation script and quality rules. |
+| `docs/` | Project brief, challenge tracks, contributor workflow, and data model docs. |
+| `governance/` | Consent templates, access policy, ethics checklist, and builder readiness guide. |
+| `dashboard/` | Starter Streamlit dashboard template. |
+| `notebooks/` | Research notebooks for exploration, data quality, and analysis patterns. |
+| `issues/` | Challenge statements and starter issue backlog. |
+| `inspirations/` | Open-ended project inspirations, not assignments or limits. |
+| `src/menstrual_health_open/` | Lightweight Python utilities used by starter scripts. |
+| `tests/` | Tests for synthetic data and validation helpers. |
+| `.github/` | CI, pull request template, issue templates, and code owner routing. |
 
 ## Quick Start
 
-Everything below needs only Python 3.10+ (the generator and validator use the
-standard library only).
-
 Generate a synthetic dataset:
 
-```bash
+```powershell
 python synthetic-data/generate.py --count 100 --output synthetic-data/generated_100.csv
+```
+
+The generator accepts any non-negative `--count` and writes records as a stream,
+so contributors can generate larger synthetic datasets as needed. Practical
+limits are disk space and runtime.
+
+Generate a dataset with optional-field missingness for testing:
+
+```powershell
+python synthetic-data/generate.py --count 100 --missingness 0.15 --output synthetic-data/generated_missingness.csv
 ```
 
 Validate a dataset:
 
-```bash
-python validation/validate_dataset.py synthetic-data/datasets/sample_50.csv
+```powershell
+python validation/validate_dataset.py synthetic-data/sample_20.csv
 ```
 
-Run the starter dashboard:
+Run the package CLI:
 
-```bash
-pip install -r dashboard/requirements.txt
-streamlit run dashboard/app.py
+```powershell
+$env:PYTHONPATH = "src"
+python -m menstrual_health_open.cli generate --count 100 --output synthetic-data/generated_100.csv
+python -m menstrual_health_open.cli validate synthetic-data/generated_100.csv
 ```
 
-Explore the notebooks:
-
-```bash
-pip install -r notebooks/requirements.txt
-jupyter lab
-```
-
-## Hackathon Workflow
+## Contributor Workflow
 
 1. Read [docs/project_brief.md](docs/project_brief.md).
-2. Pick a track from [issues/challenge_statements.md](issues/challenge_statements.md)
-   or a starter issue from [issues/issue_backlog.md](issues/issue_backlog.md) —
-   or define your own direction.
-3. Explore the schema and synthetic data (start with
-   `notebooks/01_explore_synthetic_data.ipynb`).
-4. Build using synthetic data or documented aggregate assumptions only.
-5. Submit code, docs, governance, design, translation, or research
-   contributions via pull request — see [CONTRIBUTING.md](CONTRIBUTING.md).
-6. Explain how your work improves menstrual health research infrastructure.
+2. Review [inspirations/project_inspirations.md](inspirations/project_inspirations.md).
+3. Explore the schema and synthetic data.
+4. Define a contribution direction.
+5. Develop or document your contribution using synthetic data or documented
+   aggregate assumptions.
+6. Submit code, docs, governance, design, translation, or research contributions.
+7. Explain how your work improves menstrual health research infrastructure.
 
 ## Governance
 
@@ -106,17 +119,23 @@ Start with:
 | Controlled | De-identified research datasets | Approved researchers only |
 | Private | Raw participant records and consent records | Never public |
 
+## Current Status
+
+This is a starter scaffold. It is intentionally small, readable, and safe to run
+locally. The goal is to make contribution easy without exposing sensitive data.
+
 ## Repository Protection
 
-Contributors should work on branches and submit pull requests. Direct pushes
-to `main` should be blocked using GitHub branch protection or rulesets. See
+Contributors should work on branches and submit pull requests. Direct pushes to
+`main` should be blocked using GitHub branch protection or rulesets. See
 [docs/branch_protection.md](docs/branch_protection.md).
+
+Maintainers preparing a public launch can also use
+[docs/maintainer_launch_checklist.md](docs/maintainer_launch_checklist.md).
 
 ## License
 
-Code is licensed under the MIT License (see [LICENSE](LICENSE)). Documentation
-and governance materials are licensed under CC BY 4.0 (see
-[LICENSE-DOCS.md](LICENSE-DOCS.md)). Synthetic datasets and generated fixtures
-in `synthetic-data/` are released under CC0 1.0 (see
-[synthetic-data/LICENSE](synthetic-data/LICENSE)). Details in
+Code is licensed under Apache License 2.0. Documentation and governance
+materials are licensed under CC BY 4.0. Synthetic datasets and generated
+fixtures in `synthetic-data/` are released under CC0 1.0. See
 [docs/licensing.md](docs/licensing.md).

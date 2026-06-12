@@ -1,4 +1,4 @@
-﻿# Public Positioning
+# Public Positioning
 
 ## Short Description
 
@@ -7,7 +7,7 @@ Open-source infrastructure for ethical menstrual health research.
 ## Longer Description
 
 Menstrual Health Open provides schemas, synthetic datasets, a basic validation
-baseline, governance resources, and challenge statements and a starter issue backlog for building
+baseline, governance resources, and open-ended project inspirations for building
 responsible menstrual health data infrastructure. The project is open-source,
 but real participant-level health data is protected and not publicly released.
 

@@ -1,4 +1,4 @@
-﻿# Menstrual Health Open Data Access Policy
+# Menstrual Health Open Data Access Policy
 
 ## Purpose
 This policy defines how menstrual health data within the Menstrual Health Open ecosystem is accessed, used, and governed. It establishes a tiered access model that balances open science with participant protection.
@@ -49,7 +49,7 @@ be committed to the public repo or used in public demos.
 - Fake datasets that mimic real data structure
 - No real participant information
 - Suitable for development, testing, and education
-- Generated as fixtures or examples, such as `synthetic-data/datasets/sample_50.csv`
+- Generated as fixtures or examples, such as `synthetic-data/sample_20.csv`
 
 **Requirements**: None
 **Purpose**: Enable developers and researchers to build tools safely

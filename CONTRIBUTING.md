@@ -9,8 +9,7 @@ Thank you for contributing to Menstrual Health Open.
 - Governance resources
 - Validation rules
 - Synthetic datasets
-- Dashboard templates and notebooks
-- Challenge statements and backlog issues
+- Project inspirations
 - Research methods
 - Translation and localization
 - Accessibility improvements

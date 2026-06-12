@@ -1,4 +1,4 @@
-﻿# Project Brief
+# Project Brief
 
 ## Overview
 
@@ -19,8 +19,7 @@ This is an open-source infrastructure project. The public repository contains:
 - Synthetic menstrual health datasets
 - Validation and quality-checking tools
 - Lightweight validation baseline
-- Starter dashboard templates and research notebooks
-- Challenge statements and a starter issue backlog
+- Open-ended project inspirations
 - Governance and ethics resources
 - Contribution guidelines and challenge tracks
 
@@ -53,7 +52,7 @@ All hackathon work should use synthetic datasets, sample datasets, or approved
 aggregate assumptions. Real participant-level data should not be used in the
 hackathon environment.
 
-The challenge statements are examples, not limits. Participants may contribute
+The project inspirations are examples, not limits. Participants may contribute
 code, documentation, governance, research methods, translation, accessibility
 review, community engagement materials, analysis patterns, or other reusable
 infrastructure.

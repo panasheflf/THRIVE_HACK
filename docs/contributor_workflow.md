@@ -6,7 +6,7 @@ Read:
 
 - `README.md`
 - `docs/project_brief.md`
-- `issues/challenge_statements.md`
+- `inspirations/project_inspirations.md`
 - `governance/contribution_policy.md`
 - `governance/builder_readiness_guide.md`
 
@@ -15,17 +15,15 @@ Read:
 Review:
 
 - `schema/`
-- `synthetic-data/datasets/sample_50.csv`
+- `synthetic-data/sample_20.csv`
 - `validation/`
 - `governance/`
-- `dashboard/`
-- `notebooks/`
-- `issues/issue_backlog.md`
+- `inspirations/`
 
 ## 3. Pick A Contribution Area
 
-Choose a challenge track, pick a starter issue from the backlog, combine
-multiple ideas, or define your own contribution direction.
+Choose an inspiration, combine multiple ideas, or define your own contribution
+direction.
 
 Possible first contributions include:
 
