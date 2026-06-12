@@ -2,14 +2,15 @@
 
 Concrete, scoped issues participants can pick up directly. Difficulty labels:
 **good-first-issue** (a few hours), **intermediate** (a day), **advanced**
-(multi-day or research-heavy). Each issue lists the track it belongs to from
+(multi-day or research-heavy). These are infrastructure improvements that
+support work on any of the prompts in
 [challenge_statements.md](challenge_statements.md).
 
 Claim an issue by opening a GitHub issue referencing its ID.
 
 ---
 
-## Validation & Data Quality (Track 1)
+## Validation & Data Quality
 
 - **VAL-01** (good-first-issue) — Add a cross-field check to the validator:
   flag rows where `period_duration_days` is implausibly long relative to
@@ -28,7 +29,7 @@ Claim an issue by opening a GitHub issue referencing its ID.
   variant column names (e.g. `cycle_len`, `CycleLength`) onto schema fields
   and reports unmapped columns.
 
-## Synthetic Data (Tracks 1, 5)
+## Synthetic Data
 
 - **SYN-01** (intermediate) — Add realistic correlation options to the
   generator (e.g. age band influencing cycle regularity) behind explicit
@@ -38,9 +39,9 @@ Claim an issue by opening a GitHub issue referencing its ID.
 - **SYN-03** (good-first-issue) — Add a `--locale` flag that expands the
   country list and region label patterns.
 - **SYN-04** (advanced) — Synthetic benchmark suite: parameterized datasets
-  with known injected anomalies for testing quality tools (links to Track 1).
+  with known injected anomalies for testing quality tools.
 
-## Dashboard (Track 3)
+## Dashboard
 
 - **DASH-01** (good-first-issue) — Add a data quality tab that runs
   `validation/validate_dataset.py` on the loaded dataset and displays the
@@ -54,7 +55,7 @@ Claim an issue by opening a GitHub issue referencing its ID.
 - **DASH-05** (good-first-issue) — Accessibility pass: color contrast,
   colorblind-safe palettes, and chart alt-text.
 
-## Privacy & Governance (Track 2)
+## Privacy & Governance
 
 - **GOV-01** (good-first-issue) — Plain-language one-pager: "What this project
   will never publish," derived from `docs/project_brief.md`.
@@ -67,7 +68,7 @@ Claim an issue by opening a GitHub issue referencing its ID.
 - **GOV-05** (intermediate) — Consent withdrawal workflow design: how a
   participant's withdrawal propagates through a research dataset pipeline.
 
-## Localization & Accessibility (Track 4)
+## Localization & Accessibility
 
 - **LOC-01** (good-first-issue) — Translate the data dictionary field
   definitions into one additional language as a parallel JSON file.
@@ -78,7 +79,7 @@ Claim an issue by opening a GitHub issue referencing its ID.
 - **LOC-04** (advanced) — Offline-first collection prototype that produces
   schema-conforming CSV/JSONL without a network connection.
 
-## Research Enablement (Track 5)
+## Research Enablement
 
 - **RES-01** (good-first-issue) — Add a fourth notebook demonstrating cohort
   comparison with uncertainty intervals on synthetic data.
@@ -89,7 +90,7 @@ Claim an issue by opening a GitHub issue referencing its ID.
   any schema-conforming dataset (fields, ranges, categories, missingness)
   into a shareable dataset card.
 
-## Documentation & Community (Tracks 6, 7)
+## Documentation & Community
 
 - **DOC-01** (good-first-issue) — Glossary of project terms (synthetic,
   aggregate, controlled access, suppression…) in plain language.
