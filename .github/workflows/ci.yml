@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate starter repo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compile Python files
+        run: python -m compileall synthetic-data validation dashboard
+
+      - name: Validate bundled synthetic datasets
+        run: |
+          python validation/validate_dataset.py synthetic-data/datasets/sample_50.csv
+          python validation/validate_dataset.py synthetic-data/datasets/survey_responses_1000.csv
+          python validation/validate_dataset.py synthetic-data/datasets/survey_responses_1000.jsonl
+          python validation/validate_dataset.py synthetic-data/datasets/survey_responses_missingness_500.csv
+
+      - name: Generate synthetic smoke-test dataset
+        run: python synthetic-data/generate.py --count 25 --missingness 0.1 --output /tmp/mho_synthetic.csv
+
+      - name: Validate generated smoke-test dataset
+        run: python validation/validate_dataset.py /tmp/mho_synthetic.csv

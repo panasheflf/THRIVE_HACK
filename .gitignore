@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/_broken_sample.csv
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local environment
+.env
+.env.local
+
+# Generated data (bundled datasets in synthetic-data/datasets/ are committed)
+synthetic-data/generated*.csv
+synthetic-data/generated*.jsonl
