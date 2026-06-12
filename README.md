@@ -26,6 +26,11 @@ How might we build the tools, standards, and systems needed to make menstrual
 health data more accessible, reliable, ethical, and useful for research
 worldwide?
 
+Four official sub-prompts (A-D) focus this question on measurement at the
+margins, signal from community data, closing the diagnosis gap, and
+engineering the built environment. See
+[issues/challenge_statements.md](issues/challenge_statements.md).
+
 ## What Contributors Can Explore
 
 The repository does not prescribe what participants must build. It provides a
